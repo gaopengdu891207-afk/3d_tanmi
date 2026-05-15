@@ -4,3 +4,6 @@
 
 [node name="Node2D" type="Node2D" unique_id=782496583]
 script = ExtResource("1_wtcfe")
+
+[node name="Window" type="Window" parent="." unique_id=81447672]
+oversampling_override = 1.0
