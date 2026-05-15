@@ -1,0 +1,25 @@
+# 隐藏 Godot 忽略规则文件
+.gdignore
+
+# 隐藏 Git 相关文件
+.git/
+.gitignore
+.gitattributes
+
+# 隐藏编辑器配置
+.editorconfig
+
+# 隐藏导入配置文件
+*.import
+
+# 隐藏临时文件和日志
+*.log
+*.tmp
+*.temp
+
+# 隐藏 macOS 系统文件
+.DS_Store
+._*
+
+# 隐藏 Windows 系统文件
+Thumbs.db
