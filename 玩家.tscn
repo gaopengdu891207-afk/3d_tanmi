@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bwqyw0ji5v8e7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpoi8"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qpoi8"]
+radius = 0.3
+height = 1.8
+
+[node name="玩家" type="CharacterBody3D" unique_id=1351772474]
+
+[node name="碰撞形状" type="CollisionShape3D" parent="." unique_id=1826161760]
+shape = SubResource("CapsuleShape3D_qpoi8")
+
+[node name="显示代替" type="MeshInstance3D" parent="." unique_id=1892110779]
+mesh = SubResource("CapsuleMesh_qpoi8")
