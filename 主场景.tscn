@@ -56,9 +56,6 @@ surface_material_override/0 = ExtResource("1_ynihe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="地面" unique_id=1083827605]
 shape = SubResource("BoxShape3D_qgdmo")
 
-[node name="摄像机" type="Camera3D" parent="." unique_id=1455848959]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 2, 2)
-
 [node name="玩家" parent="." unique_id=1351772474 instance=ExtResource("2_abbb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 

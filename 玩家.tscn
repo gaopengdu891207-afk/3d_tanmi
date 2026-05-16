@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bwqyw0ji5v8e7"]
 
+[ext_resource type="Script" uid="uid://ckm2mxcygkkb8" path="res://玩家.gd" id="1_ssctm"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpoi8"]
 radius = 0.3
 height = 1.8
@@ -9,9 +11,13 @@ radius = 0.3
 height = 1.8
 
 [node name="玩家" type="CharacterBody3D" unique_id=1351772474]
+script = ExtResource("1_ssctm")
 
 [node name="碰撞形状" type="CollisionShape3D" parent="." unique_id=1826161760]
 shape = SubResource("CapsuleShape3D_qpoi8")
 
 [node name="显示代替" type="MeshInstance3D" parent="." unique_id=1892110779]
 mesh = SubResource("CapsuleMesh_qpoi8")
+
+[node name="摄像机" type="Camera3D" parent="." unique_id=1659033006]
+transform = Transform3D(1, -5.5761142e-09, -3.5712133e-10, 5.5761142e-09, 0.99183, 0.12756662, -3.5712241e-10, -0.12756662, 0.99183, 0, 1.1747869, 0.9776988)
