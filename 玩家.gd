@@ -1,7 +1,12 @@
+class_name 玩家类型
 extends CharacterBody3D
 
+@onready var 摄像机: Camera3D = $摄像机
 
-const SPEED = 5.0
+@export var 俯仰限制: float = 45
+@export_range(0, 1, 0.1) var 视角灵敏度: float = 0.1
+
+const SPEED = 5.0 
 const JUMP_VELOCITY = 4.5
 
 
@@ -23,3 +28,12 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED * delta)
 
 	move_and_slide()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and not (event.relative as Vector2).is_zero_approx():
+		self.rotate_y(deg_to_rad(-event.relative.x * 视角灵敏度))
+		摄像机.rotate_x(deg_to_rad(-event.relative.y * 视角灵敏度))
+		摄像机.rotation_degrees.x = clamp(摄像机.rotation_degrees.x,-俯仰限制,俯仰限制)
+	
+ 

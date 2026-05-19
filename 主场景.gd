@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var 玩家: CharacterBody3D = $玩家
+@onready var 玩家: 玩家类型 = $玩家
 
 func _ready() -> void:
 	pass 
