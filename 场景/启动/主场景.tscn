@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://deraxjtff2051"]
 
-[ext_resource type="Script" uid="uid://cl7fuo6vps7op" path="res://主场景.gd" id="1_qgdmo"]
-[ext_resource type="Material" uid="uid://bciqj7364vrf" path="res://材质_草地.tres" id="1_ynihe"]
-[ext_resource type="PackedScene" uid="uid://bwqyw0ji5v8e7" path="res://玩家.tscn" id="2_abbb7"]
+[ext_resource type="Script" uid="uid://cl7fuo6vps7op" path="res://场景/启动/主场景.gd" id="1_vc3b4"]
+[ext_resource type="Material" uid="uid://bciqj7364vrf" path="res://资源/材质/材质_草地.tres" id="2_d8xm4"]
+[ext_resource type="PackedScene" uid="uid://bwqyw0ji5v8e7" path="res://场景/玩家/玩家.tscn" id="3_tidec"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5afq"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,7 +37,7 @@ bounce = 0.7
 [sub_resource type="SphereMesh" id="SphereMesh_abbb7"]
 
 [node name="主场景" type="Node3D" unique_id=1173873466]
-script = ExtResource("1_qgdmo")
+script = ExtResource("1_vc3b4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1284556092]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -51,12 +51,12 @@ metadata/_edit_group_ = true
 
 [node name="地面形状" type="MeshInstance3D" parent="地面" unique_id=1158397166]
 mesh = SubResource("PlaneMesh_o5afq")
-surface_material_override/0 = ExtResource("1_ynihe")
+surface_material_override/0 = ExtResource("2_d8xm4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="地面" unique_id=1083827605]
 shape = SubResource("BoxShape3D_qgdmo")
 
-[node name="玩家" parent="." unique_id=1351772474 instance=ExtResource("2_abbb7")]
+[node name="玩家" parent="." unique_id=1351772474 instance=ExtResource("3_tidec")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 
 [node name="静态长方体" type="StaticBody3D" parent="." unique_id=2005159638]

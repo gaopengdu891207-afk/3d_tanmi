@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bwqyw0ji5v8e7"]
+
+[ext_resource type="Script" uid="uid://ckm2mxcygkkb8" path="res://场景/玩家/玩家.gd" id="1_o2saa"]
+[ext_resource type="Script" uid="uid://badc204yyvh45" path="res://组件/通用/移动组件.gd" id="2_v4cha"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpoi8"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qpoi8"]
+radius = 0.3
+height = 1.8
+
+[node name="玩家" type="CharacterBody3D" unique_id=1351772474]
+script = ExtResource("1_o2saa")
+"视角灵敏度" = 0.3
+
+[node name="碰撞形状" type="CollisionShape3D" parent="." unique_id=1826161760]
+shape = SubResource("CapsuleShape3D_qpoi8")
+
+[node name="显示代替" type="MeshInstance3D" parent="." unique_id=1892110779]
+visible = false
+mesh = SubResource("CapsuleMesh_qpoi8")
+
+[node name="相机支点" type="Node3D" parent="." unique_id=527230962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="弹簧臂" type="SpringArm3D" parent="相机支点" unique_id=1191969629]
+
+[node name="摄像机" type="Camera3D" parent="相机支点/弹簧臂" unique_id=1659033006]
+
+[node name="组件" type="Node" parent="." unique_id=467790480]
+
+[node name="移动" type="Node" parent="组件" unique_id=194463138]
+unique_name_in_owner = true
+script = ExtResource("2_v4cha")
+metadata/_custom_type_script = "uid://badc204yyvh45"
