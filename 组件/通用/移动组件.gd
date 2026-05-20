@@ -20,7 +20,7 @@ func  _physics_process(delta: float) -> void:
 	if not is_on_floor and 是否应用重力:
 		velocity.y -= _重力 * delta
 	if is_jumping:
-		velocity.y += 跳跃冲量
+		velocity.y = 跳跃冲量
 		is_jumping = false
 	if direction:
 		velocity.x = direction.x * 速度

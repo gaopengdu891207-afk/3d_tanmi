@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ckm2mxcygkkb8" path="res://场景/玩家/玩家.gd" id="1_o2saa"]
 [ext_resource type="Script" uid="uid://badc204yyvh45" path="res://组件/通用/移动组件.gd" id="2_v4cha"]
+[ext_resource type="Script" uid="uid://cx6odpmdjekc8" path="res://组件/玩家/输入组件.gd" id="3_2pksg"]
+[ext_resource type="Script" uid="uid://j7mah5v128r0" path="res://组件/玩家/相机组件.gd" id="4_63w52"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpoi8"]
 radius = 0.3
@@ -27,7 +29,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="弹簧臂" type="SpringArm3D" parent="相机支点" unique_id=1191969629]
 
-[node name="摄像机" type="Camera3D" parent="相机支点/弹簧臂" unique_id=1659033006]
+[node name="相机同步器" type="RemoteTransform3D" parent="相机支点/弹簧臂" unique_id=739921117]
+visible = false
 
 [node name="组件" type="Node" parent="." unique_id=467790480]
 
@@ -35,3 +38,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 unique_name_in_owner = true
 script = ExtResource("2_v4cha")
 metadata/_custom_type_script = "uid://badc204yyvh45"
+
+[node name="输入" type="Node" parent="组件" unique_id=1894611605]
+unique_name_in_owner = true
+script = ExtResource("3_2pksg")
+metadata/_custom_type_script = "uid://cx6odpmdjekc8"
+
+[node name="相机" type="Node" parent="组件" unique_id=1049723992 node_paths=PackedStringArray("玩家", "活动相机", "相机支点", "弹簧臂")]
+unique_name_in_owner = true
+script = ExtResource("4_63w52")
+"玩家" = NodePath("../..")
+"活动相机" = NodePath("")
+"相机支点" = NodePath("../../相机支点")
+"弹簧臂" = NodePath("../../相机支点/弹簧臂")
+metadata/_custom_type_script = "uid://j7mah5v128r0"

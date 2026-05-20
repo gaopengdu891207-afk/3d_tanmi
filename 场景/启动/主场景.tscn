@@ -90,3 +90,5 @@ shape = SubResource("SphereShape3D_abbb7")
 
 [node name="形状" type="MeshInstance3D" parent="小球" unique_id=1018839393]
 mesh = SubResource("SphereMesh_abbb7")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=253196581]
