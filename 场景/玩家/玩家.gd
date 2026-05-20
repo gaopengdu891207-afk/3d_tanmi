@@ -20,7 +20,12 @@ func _ready() -> void:
 	移动.move.connect(_on_move)
 	输入.移动.connect(_on_移动)
 	输入.跳跃.connect(_on_跳跃)
-	输入.鼠标偏移.connect(_on_鼠标偏移)
+	输入.鼠标偏移.connect(_on_鼠标偏移) 
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("切换场景"):
+		场景管理器.切换场景("res://场景/UI/主菜单/主菜单.tscn")
+		 
 
 func 设置相机(camera: Camera3D):
 	if 相机:

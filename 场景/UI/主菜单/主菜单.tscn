@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dkqmbwe321csl"]
+
+[ext_resource type="Script" uid="uid://dphmjqn1us60f" path="res://场景/UI/主菜单/主菜单.gd" id="1_i65ta"]
+
+[node name="主菜单" type="Control" unique_id=111812437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i65ta")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1112577646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.09019608, 0.09019608, 0.4392157)
+
+[node name="垂直容器" type="VBoxContainer" parent="." unique_id=2138050286]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -47.0
+offset_right = 48.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="垂直容器" unique_id=1203172625]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "第一人称游戏"
+
+[node name="开始游戏" type="Button" parent="垂直容器" unique_id=380347391]
+layout_mode = 2
+text = "开始游戏"
+
+[node name="退出游戏" type="Button" parent="垂直容器" unique_id=789645998]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.5995309, 0.7476982, 0.3179773, 1)
+text = "退出游戏"
+
+[connection signal="pressed" from="垂直容器/开始游戏" to="." method="_on_开始游戏_pressed"]
+[connection signal="pressed" from="垂直容器/退出游戏" to="." method="_on_退出游戏_pressed"]
