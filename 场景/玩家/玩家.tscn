@@ -44,11 +44,10 @@ unique_name_in_owner = true
 script = ExtResource("3_2pksg")
 metadata/_custom_type_script = "uid://cx6odpmdjekc8"
 
-[node name="相机" type="Node" parent="组件" unique_id=1049723992 node_paths=PackedStringArray("玩家", "活动相机", "相机支点", "弹簧臂")]
+[node name="相机" type="Node" parent="组件" unique_id=1049723992 node_paths=PackedStringArray("玩家", "相机支点", "弹簧臂")]
 unique_name_in_owner = true
 script = ExtResource("4_63w52")
 "玩家" = NodePath("../..")
-"活动相机" = NodePath("")
 "相机支点" = NodePath("../../相机支点")
 "弹簧臂" = NodePath("../../相机支点/弹簧臂")
 metadata/_custom_type_script = "uid://j7mah5v128r0"

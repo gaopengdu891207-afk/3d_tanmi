@@ -1,0 +1,10 @@
+{
+  "mcpServers": [
+    {
+      "name": "godot",
+      "command": "npx",
+      "args": ["-y", "@elfensky/godot-mcp"],
+      "env": {}
+    }
+  ]
+}

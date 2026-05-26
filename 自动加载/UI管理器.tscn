@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://f3r7t82512wi"]
+
+[ext_resource type="PackedScene" uid="uid://dkqmbwe321csl" path="res://场景/UI/主菜单/主菜单.tscn" id="1_f2mpr"]
+[ext_resource type="Script" uid="uid://c231nkxqguimc" path="res://自动加载/UI管理器.gd" id="1_p2k7k"]
+
+[node name="UI管理器" type="Control" unique_id=1966858244]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_p2k7k")
+
+[node name="HUD层" type="CanvasLayer" parent="." unique_id=1232964116]
+
+[node name="准心" type="ColorRect" parent="HUD层" unique_id=660895802]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="功能层" type="CanvasLayer" parent="." unique_id=1097288234]
+layer = 2
+
+[node name="系统层" type="CanvasLayer" parent="." unique_id=760825234]
+process_mode = 3
+layer = 3
+
+[node name="主菜单" parent="系统层" unique_id=111812437 instance=ExtResource("1_f2mpr")]
+
+[node name="弹出层" type="CanvasLayer" parent="." unique_id=195275427]
+layer = 4

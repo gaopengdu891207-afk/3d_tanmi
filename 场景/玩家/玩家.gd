@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("切换场景"):
-		场景管理器.切换场景("res://场景/UI/主菜单/主菜单.tscn")
+		UI管理器.打开系统层控件("主菜单")
 		 
 
 func 设置相机(camera: Camera3D):
