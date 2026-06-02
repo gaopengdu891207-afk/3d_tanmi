@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE 
+	状态管理器.切换状态(状态管理器.游戏状态.菜单)
 
 func _on_开始游戏_pressed() -> void:
 	var ui_manager = get_node("/root/UI管理器")

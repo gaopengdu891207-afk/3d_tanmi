@@ -22,10 +22,7 @@ func _ready() -> void:
 	输入.跳跃.connect(_on_跳跃)
 	输入.鼠标偏移.connect(_on_鼠标偏移) 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("切换场景"):
-		UI管理器.打开系统层控件("主菜单")
-		 
+
 
 func 设置相机(camera: Camera3D):
 	if 相机:

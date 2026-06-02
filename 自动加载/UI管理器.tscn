@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dkqmbwe321csl" path="res://场景/UI/主菜单/主菜单.tscn" id="1_f2mpr"]
 [ext_resource type="Script" uid="uid://c231nkxqguimc" path="res://自动加载/UI管理器.gd" id="1_p2k7k"]
+[ext_resource type="PackedScene" uid="uid://f2mayix344ps" path="res://场景/UI/暂停菜单/暂停菜单.tscn" id="3_qn252"]
 
 [node name="UI管理器" type="Control" unique_id=1966858244]
 process_mode = 3
@@ -38,6 +39,11 @@ process_mode = 3
 layer = 3
 
 [node name="主菜单" parent="系统层" unique_id=111812437 instance=ExtResource("1_f2mpr")]
+visible = false
+mouse_filter = 1
+
+[node name="暂停菜单" parent="系统层" unique_id=909585275 instance=ExtResource("3_qn252")]
+mouse_filter = 1
 
 [node name="弹出层" type="CanvasLayer" parent="." unique_id=195275427]
 layer = 4

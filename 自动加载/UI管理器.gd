@@ -7,10 +7,12 @@ extends Control
 
 @onready var 准心: ColorRect = $HUD层/准心
 @onready var 主菜单: Control = $系统层/主菜单
+@onready var 暂停菜单: Control = $系统层/暂停菜单
 
 @onready var ui实例池:Dictionary[String, Control] = {
-	"准心":准心,
-	"主菜单":主菜单,
+	"准心": 准心,
+	"主菜单": 主菜单,
+	"暂停菜单": 暂停菜单
 }
 
 
@@ -33,12 +35,10 @@ func 打开系统层控件(控件名称:String):
 	系统层.visible = true
 	弹出层.visible = false
 	
-	get_tree().paused = true
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
+	状态管理器.切换状态(状态管理器.游戏状态.暂停)
+ 
 func 关闭系统层控件(控件名称:String):
 	ui实例池[控件名称].visible = false
 	系统层.visible = false
 	hud层.visible = true
-	get_tree().paused = false
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	

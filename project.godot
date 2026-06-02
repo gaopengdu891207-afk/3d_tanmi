@@ -19,6 +19,8 @@ config/icon="res://资源/贴图/icon.svg"
 
 "场景管理器"="*uid://0fvwm1oxiqmb"
 "UI管理器"="*uid://f3r7t82512wi"
+"状态管理器"="*uid://cqki7pjmekh7i"
+"游戏管理器"="*uid://bicikiuuh11l7"
 
 [debug]
 
